@@ -70,6 +70,15 @@ batch_stats_callback = CollectBatchStats()
 history = model.fit(image_data, epochs=2,
                     steps_per_epoch=steps_per_epoch,
                     callbacks=[batch_stats_callback])
+'''
+Our Model can accurately predict which image belongs to which class. At the end of the second epoch the accuracy rating is 88%. 
+(32, 43)
+Epoch 1/2
+1226/1226 [==============================] - 114s 89ms/step - loss: 0.9316 - acc: 0.7351
+Epoch 2/2
+1226/1226 [==============================] - 110s 90ms/step - loss: 0.4128 - acc: 0.8818
+'''
+
 plt.figure()
 plt.ylabel("Loss")
 plt.xlabel("Training Steps")
@@ -107,3 +116,4 @@ export_path = f"./saved_models/model_1"
 model.save(export_path)
 
 export_path
+
