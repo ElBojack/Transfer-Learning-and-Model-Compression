@@ -61,8 +61,9 @@ for n in range(30):
 plt.show()
 
 print(getAccuracy(label_batch, result))
-'''(3） my compressed model's size is 8.64M and the pre-compressed model in problem 1 is 10.8M'''
-'''(4) It used ~1.9sec (result after multiple runs) '''
+'''(3） The compressed model's size is 8.64M and the pre-compressed model in problem 1 is 10.8M'''
+'''(4) It use 1.9sec on average(result after multiple runs) '''
 '''(5) With tf lite model, we achieve an accuracy of 97% on average (result atfer multiple runs).
-Comparer to the problem 1 model, we lost 1% accuracy on average. We can conclude that the compression doesn't impact the accuracy.
+This tf lite model was adapted from a problem 1 model with 20 epoch and 98% accuracy at the end of the last epoch.
+Compared to the problem 1 model (20 epoch), we lost 1% accuracy on average. It is negligible. We can conclude that the compression doesn't impact the accuracy.
 '''
