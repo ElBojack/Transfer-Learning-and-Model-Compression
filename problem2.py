@@ -61,9 +61,13 @@ for n in range(30):
 plt.show()
 
 print(getAccuracy(label_batch, result))
-'''(3） The compressed model's size is 8.64M and the pre-compressed model in problem 1 is 10.8M'''
-'''(4) It use 1.9sec on average(result after multiple runs) '''
-'''(5) With tf lite model, we achieve an accuracy of 97% on average (result atfer multiple runs).
+'''(3） The compressed model's size is 8.64M and the pre-compressed model in problem 1 is 10.8M (20 epoch model)'''
+'''(4) It use 1.9sec on average (result after multiple runs on a 20 epoch model) '''
+'''(5) With tf lite model, we achieve an accuracy of 97% on average (result atfer multiple runs on a 20 epoch model).
 This tf lite model was adapted from a problem 1 model with 20 epoch and 98% accuracy at the end of the last epoch.
-Compared to the problem 1 model (20 epoch), we lost 1% accuracy on average. It is negligible. We can conclude that the compression doesn't impact the accuracy.
+Compared to the problem 1 model (20 epoch), we lost 1% accuracy on average (97%).
+For the 2 epoch model (in the repository), we achieve 87.5% accuracy. 
+Compared to the problem 1 model (2 epoch), we won 5% accuracy on average (93%).
+We can conclude that the compression can improve a model performances when it is build on a small number of epoch.
+For a high number of epoch, the compression has a lower impact, almost unsignificant.
 '''
